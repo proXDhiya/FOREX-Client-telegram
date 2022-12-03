@@ -153,7 +153,7 @@ header > .hero > img:hover {
   transform: scale(1.1);
 }
 header > .about-us {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../res/wallpaperflare.com_wallpaper (1).jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../res/stock-trading-g1fed35b12_1920.jpg");
   background-size: cover;
   background-attachment: fixed;
   color: #F6F6F6;
