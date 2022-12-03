@@ -153,7 +153,10 @@ header > .hero > img:hover {
   transform: scale(1.1);
 }
 header > .about-us {
-  background-color: #e7eaf0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../res/wallpaperflare.com_wallpaper (1).jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #F6F6F6;
   padding: 4rem 0;
 }
 header > .about-us > .container > .content > h2 {

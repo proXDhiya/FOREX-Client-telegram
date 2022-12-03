@@ -163,7 +163,11 @@ header {
     }
 
     & > .about-us {
-        background-color: lighten($color-background-secondary, 5%);
+        background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../../res/wallpaperflare.com_wallpaper (1).jpg');
+        background-size: cover;
+        background-attachment: fixed;
+
+        color: $color-background-primary;
         padding: $spacing-5 0;
         & > .container > .content {
             & > h2 {
