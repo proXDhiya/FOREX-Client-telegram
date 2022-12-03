@@ -26,7 +26,6 @@ body {
     font-weight: $font-weight-regular;
     color: $color-text-primary;
     background-color: $color-background-primary;
-    scroll-behavior: smooth;
     min-height: 100vh;
 }
 
@@ -58,7 +57,8 @@ header {
     & > nav {
         width: 100%;
         height: 65px;
-        background-color: lighten($color-nav, 45%);
+        background-color: transparentize($color-nav, 0.85);
+        backdrop-filter: blur(10px);
         position: fixed;
         top: 0;
         left: 0;
@@ -152,6 +152,14 @@ header {
             display: block;
             width: fit-content;
         }
+        & > img {
+            width: 100%;
+            height: auto;
+            transition: transform 2s ease-in-out;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 
     & > .about-us {
@@ -169,6 +177,67 @@ header {
                 font-size: 1.2rem;
                 font-weight: $font-weight-light;
                 text-align: center;
+            }
+        }
+    }
+}
+
+#services {
+    padding: $spacing-5 0;
+    & > .container {
+        & > h2 {
+            font-size: 2.5rem;
+            font-weight: $font-weight-regular;
+            margin-bottom: $spacing-3;
+            text-transform: uppercase;
+            position: relative;
+            width: fit-content;
+            margin: 0 auto $spacing-5 auto;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 3px;
+                width: 90%;
+                margin-left: 5%;
+                background-color: $color-text-tertiary;
+            }
+        }
+        & > .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+            grid-gap: $spacing-5;
+            & > .service {
+                width: 100%;
+                height: auto;
+                background-color: lighten($color-background-secondary, 5%);
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                border-radius: 3px;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+                & > img {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: $spacing-4;
+                }
+                & > h3 {
+                    font-size: 1.5rem;
+                    font-weight: $font-weight-regular;
+                    margin-bottom: $spacing-3;
+                    margin-left: $spacing-3;
+                }
+                & > p {
+                    font-size: 1.1rem;
+                    font-weight: $font-weight-light;
+                    margin-bottom: $spacing-4;
+                    margin-left: $spacing-3;
+                }
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                }
             }
         }
     }

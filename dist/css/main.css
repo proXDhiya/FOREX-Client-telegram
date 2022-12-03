@@ -7,13 +7,16 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #333333;
   background-color: #F6F6F6;
-  scroll-behavior: smooth;
   min-height: 100vh;
 }
 
@@ -46,7 +49,8 @@ header {
 header > nav {
   width: 100%;
   height: 65px;
-  background-color: #adb6bf;
+  background-color: rgba(59, 67, 76, 0.15);
+  backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
   left: 0;
@@ -140,6 +144,14 @@ header > .hero > .btn {
   display: block;
   width: fit-content;
 }
+header > .hero > img {
+  width: 100%;
+  height: auto;
+  transition: transform 2s ease-in-out;
+}
+header > .hero > img:hover {
+  transform: scale(1.1);
+}
 header > .about-us {
   background-color: #e7eaf0;
   padding: 4rem 0;
@@ -155,6 +167,65 @@ header > .about-us > .container > .content > p {
   font-size: 1.2rem;
   font-weight: 300;
   text-align: center;
+}
+
+#services {
+  padding: 4rem 0;
+}
+#services > .container > h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 4rem auto;
+}
+#services > .container > h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 90%;
+  margin-left: 5%;
+  background-color: #E85425;
+}
+#services > .container > .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  grid-gap: 4rem;
+}
+#services > .container > .services-grid > .service {
+  width: 100%;
+  height: auto;
+  background-color: #e7eaf0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+#services > .container > .services-grid > .service > img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+#services > .container > .services-grid > .service > h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+#services > .container > .services-grid > .service > p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+#services > .container > .services-grid > .service:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
