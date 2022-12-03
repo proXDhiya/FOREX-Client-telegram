@@ -1,0 +1,108 @@
+@use 'config';
+
+$font-family: 'Roboto', sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 500;
+$font-size: 16px;
+
+$color-background-primary: #F6F6F6;
+$color-background-secondary: #d7dde6;
+$color-text-primary: #333333;
+$color-text-secondary: #A6A6A6;
+$color-text-tertiary: #E85425;
+$color-nav: #3b434c;
+
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 1rem;
+$spacing-4: 2rem;
+$spacing-5: 4rem;
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight-regular;
+    color: $color-text-primary;
+    background-color: $color-background-primary;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: $spacing-2 $spacing-4 !important;
+    border: 1px solid $color-text-tertiary;
+    border-radius: 3px;
+    background-color: $color-text-tertiary;
+    color: $color-background-primary !important;
+    font-weight: $font-weight-bold;
+    &:hover {
+        background-color: lighten($color-text-tertiary, 15%);
+        transform: scale(1.05);
+    }
+    &::after {
+        height: 0 !important;
+    }
+}
+
+header {
+    width: 100%;
+    & > nav {
+        width: 100%;
+        height: 80px;
+        background-color: lighten($color-nav, 45%);
+        & > .container {
+            display: grid;
+            grid-template-columns: 10% 1fr;
+            height: 100%;
+            align-items: center;
+            & > img {
+                width: 80px;
+                height: auto;
+                cursor: pointer;
+            }
+            & > ul {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                justify-items: end;
+                & > li {
+                    list-style: none;
+                    & > a {
+                        text-decoration: none;
+                        color: $color-text-primary;
+                        font-weight: $font-weight-bold;
+                        font-size: 1.2rem;
+                        padding: $spacing-2;
+                        transition: all 0.3s ease-in-out;
+                        position: relative;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 4px;
+                            left: 0;
+                            width: 0;
+                            height: 3px;
+                            background-color: $color-text-tertiary;
+                            transition: all 0.3s ease-in-out;
+                        }
+                        &:hover {
+                            color: $color-text-tertiary;
+                            &:hover::after {
+                                position: absolute;
+                                content: '';
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
