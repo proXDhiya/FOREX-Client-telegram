@@ -27,16 +27,16 @@ body {
 
 .btn {
   padding: 0.25rem 2rem !important;
-  border: 1px solid #E85425;
+  border: 1px solid #ECAD00;
   border-radius: 3px;
-  background-color: #E85425;
+  background-color: #ECAD00;
   color: #F6F6F6 !important;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 .btn:hover {
-  background-color: #ef8a6a;
+  background-color: #ffca3a;
   transform: scale(1.1);
 }
 .btn::after {
@@ -91,11 +91,11 @@ header > nav > .container > ul > li > a::after {
   left: 0;
   width: 0;
   height: 3px;
-  background-color: #E85425;
+  background-color: #ECAD00;
   transition: all 0.3s ease-in-out;
 }
 header > nav > .container > ul > li > a:hover {
-  color: #E85425;
+  color: #ECAD00;
 }
 header > nav > .container > ul > li > a:hover:hover::after {
   position: absolute;
@@ -114,7 +114,7 @@ header > .hero > h1 {
   text-transform: uppercase;
 }
 header > .hero > h1 > span {
-  color: #E85425;
+  color: #ECAD00;
   position: relative;
 }
 header > .hero > h1 > span::after {
@@ -125,7 +125,7 @@ header > .hero > h1 > span::after {
   height: 2px;
   width: 80%;
   margin-left: 10%;
-  background-color: #E85425;
+  background-color: #ECAD00;
 }
 header > .hero > p {
   font-size: 1.2rem;
@@ -192,7 +192,7 @@ header > .about-us > .container > .content > p {
   height: 3px;
   width: 90%;
   margin-left: 5%;
-  background-color: #E85425;
+  background-color: #ECAD00;
 }
 #services > .container > .services-grid {
   display: grid;
@@ -243,7 +243,7 @@ header > .about-us > .container > .content > p {
   margin: 0 auto 1rem auto;
 }
 #reviews > .container > h2 > span {
-  color: #E85425;
+  color: #ECAD00;
   position: relative;
 }
 #reviews > .container > h2 > span::after {
@@ -254,7 +254,7 @@ header > .about-us > .container > .content > p {
   height: 3px;
   width: 90%;
   margin-left: 5%;
-  background-color: #E85425;
+  background-color: #ECAD00;
 }
 #reviews > .container > p {
   font-size: 1.2rem;
@@ -278,7 +278,7 @@ header > .about-us > .container > .content > p {
   font-weight: 400;
   margin-bottom: 0.5rem;
   font-style: italic;
-  color: #E85425;
+  color: #ECAD00;
 }
 #reviews > .container > .dottes {
   display: flex;
@@ -289,7 +289,7 @@ header > .about-us > .container > .content > p {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #E85425;
+  background-color: #ECAD00;
   margin: 0 5px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -299,8 +299,80 @@ header > .about-us > .container > .content > p {
 }
 
 footer {
-  background-color: #d7dde6;
+  background-color: #495b75;
   padding: 4rem 0;
+  color: #F6F6F6;
+}
+footer > .container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 4rem;
+}
+footer > .container > .join > h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #ECAD00;
+}
+footer > .container > .join > p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+footer > .container > .join > .btn {
+  padding: 0.5rem 4rem !important;
+  border: none;
+  background-color: #ECAD00;
+  color: #F6F6F6;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+footer > .container > .join > .btn:hover {
+  background-color: #ffbd07;
+}
+footer > .container > .contact {
+  justify-self: end;
+}
+footer > .container > .contact > ul {
+  margin-top: 1rem;
+  list-style: none;
+}
+footer > .container > .contact > ul > li {
+  width: 350px;
+  height: 43px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+footer > .container > .contact > ul > li > a {
+  color: #F6F6F6;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: all 0.3s ease-in-out;
+}
+footer > .container > .contact > ul > li > a:hover {
+  color: #ECAD00;
+}
+footer > .container > .contact > .social {
+  margin-top: 2rem;
+}
+footer > .container > .contact > .social > a {
+  color: #F6F6F6;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+footer > .container > .contact > .social > a:hover {
+  color: #ECAD00;
+}
+footer > .container > .contact > .social > a > ion-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -10,7 +10,7 @@ $color-background-primary: #F6F6F6;
 $color-background-secondary: #d7dde6;
 $color-text-primary: #333333;
 $color-text-secondary: #A6A6A6;
-$color-text-tertiary: #E85425;
+$color-text-tertiary: #ECAD00;
 $color-nav: #3b434c;
 
 $spacing-1: 0.25rem;
@@ -319,9 +319,81 @@ header {
 }
 
 footer {
-    background-color: $color-background-secondary;
+    // background-color: $color-background-secondary;
+    background-color: darken($color-background-secondary, 50%);
     padding: $spacing-5 0;
+    color: $color-background-primary;
     & > .container {
-        
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-gap: $spacing-5;
+        & > .join {
+            & > h2 {
+                font-size: 2.5rem;
+                font-weight: $font-weight-regular;
+                text-transform: uppercase;
+                margin-bottom: $spacing-3;
+                color: $color-text-tertiary;
+            }
+            & > p {
+                font-size: 1.2rem;
+                font-weight: $font-weight-light;
+                margin-bottom: $spacing-4;
+            }
+            & > .btn {
+                padding: $spacing-2 $spacing-5 !important;
+                border: none;
+                background-color: $color-text-tertiary;
+                color: $color-background-primary;
+                font-size: 1.2rem;
+                font-weight: $font-weight-regular;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    background-color: lighten($color-text-tertiary, 5%);
+                }
+            }
+        }
+        & > .contact {
+            justify-self: end;
+            & > ul {
+                margin-top: $spacing-3;
+                list-style: none;;
+                & > li {
+                    width: 350px;
+                    height: 43px;
+                    display: grid;
+                    grid-template-columns: 1fr 3fr;
+                    align-items: center;
+                    & > a {
+                        color: $color-background-primary;
+                        font-size: 1.2rem;
+                        font-weight: $font-weight-light;
+                        transition: all 0.3s ease-in-out;
+                        &:hover {
+                            color: $color-text-tertiary;
+                        }
+                    }
+                }
+            }
+            & > .social {
+                margin-top: $spacing-4;
+                & > a {
+                    color: $color-background-primary;
+                    font-size: 1.2rem;
+                    font-weight: $font-weight-light;
+                    transition: all 0.3s ease-in-out;
+                    text-decoration: none;
+                    &:hover {
+                        color: $color-text-tertiary;
+                    }
+                    & > ion-icon {
+                        font-size: 2rem;
+                        margin-right: $spacing-3;
+                    }
+                }
+            }
+        }
     }
 }
