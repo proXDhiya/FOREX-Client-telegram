@@ -29,6 +29,7 @@ body {
   background-color: #E85425;
   color: #F6F6F6 !important;
   font-weight: 500;
+  text-decoration: none;
 }
 .btn:hover {
   background-color: #ef8a6a;

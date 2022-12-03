@@ -41,6 +41,7 @@ body {
     background-color: $color-text-tertiary;
     color: $color-background-primary !important;
     font-weight: $font-weight-bold;
+    text-decoration: none;
     &:hover {
         background-color: lighten($color-text-tertiary, 15%);
         transform: scale(1.05);
@@ -104,5 +105,5 @@ header {
         }
     }
 
-    
+
 }
