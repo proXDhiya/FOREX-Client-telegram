@@ -35,7 +35,7 @@ body {
 }
 
 .btn {
-    padding: $spacing-2 $spacing-4 !important;
+    padding: $spacing-1 $spacing-4 !important;
     border: 1px solid $color-text-tertiary;
     border-radius: 3px;
     background-color: $color-text-tertiary;
@@ -56,9 +56,9 @@ header {
     width: 100%;
     & > nav {
         width: 100%;
-        height: 65px;
-        background-color: transparentize($color-nav, 0.85);
-        backdrop-filter: blur(10px);
+        height: 50px;
+        background-color: rgba(lighten($color-nav, 60%), 0.8);
+        backdrop-filter: blur(30px);
         position: fixed;
         top: 0;
         left: 0;
@@ -69,7 +69,7 @@ header {
             height: 100%;
             align-items: center;
             & > img {
-                width: 80px;
+                width: 70px;
                 height: auto;
                 cursor: pointer;
             }
@@ -246,5 +246,82 @@ header {
                 }
             }
         }
+    }
+}
+
+#reviews {
+    padding: $spacing-5 0;
+    background-color: lighten($color-background-secondary, 7%);
+    & > .container {
+        & > h2 {
+            font-size: 2.5rem;
+            font-weight: $font-weight-regular;
+            text-transform: uppercase;
+            width: fit-content;
+            margin: 0 auto $spacing-3 auto;
+            & > span {
+                color: $color-text-tertiary;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 3px;
+                    width: 90%;
+                    margin-left: 5%;
+                    background-color: $color-text-tertiary;
+                }
+            }
+        }
+        & > p {
+            font-size: 1.2rem;
+            font-weight: $font-weight-light;
+            text-align: center;
+            margin-bottom: $spacing-5;
+        }
+        & > .review {
+            display: grid;
+            grid-template-rows: 2fr 1fr 1fr;
+            & > p {
+                width: 60%;
+                margin: 0 auto $spacing-2 auto;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            & > h3 {
+                text-align: center;
+                font-size: 1.65rem;
+                font-weight: $font-weight-regular;
+                margin-bottom: $spacing-2;
+                font-style: italic;
+                color: $color-text-tertiary;
+            }
+        }
+        & > .dottes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & > .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $color-text-tertiary;
+                margin: 0 5px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $color-background-secondary;
+    padding: $spacing-5 0;
+    & > .container {
+        
     }
 }

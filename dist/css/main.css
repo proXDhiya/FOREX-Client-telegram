@@ -26,7 +26,7 @@ body {
 }
 
 .btn {
-  padding: 0.5rem 2rem !important;
+  padding: 0.25rem 2rem !important;
   border: 1px solid #E85425;
   border-radius: 3px;
   background-color: #E85425;
@@ -48,9 +48,9 @@ header {
 }
 header > nav {
   width: 100%;
-  height: 65px;
-  background-color: rgba(59, 67, 76, 0.15);
-  backdrop-filter: blur(10px);
+  height: 50px;
+  background-color: rgba(216, 220, 225, 0.8);
+  backdrop-filter: blur(30px);
   position: fixed;
   top: 0;
   left: 0;
@@ -63,7 +63,7 @@ header > nav > .container {
   align-items: center;
 }
 header > nav > .container > img {
-  width: 80px;
+  width: 70px;
   height: auto;
   cursor: pointer;
 }
@@ -229,6 +229,78 @@ header > .about-us > .container > .content > p {
 #services > .container > .services-grid > .service:hover {
   transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#reviews {
+  padding: 4rem 0;
+  background-color: #edf0f4;
+}
+#reviews > .container > h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: fit-content;
+  margin: 0 auto 1rem auto;
+}
+#reviews > .container > h2 > span {
+  color: #E85425;
+  position: relative;
+}
+#reviews > .container > h2 > span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 90%;
+  margin-left: 5%;
+  background-color: #E85425;
+}
+#reviews > .container > p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+#reviews > .container > .review {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+#reviews > .container > .review > p {
+  width: 60%;
+  margin: 0 auto 0.5rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#reviews > .container > .review > h3 {
+  text-align: center;
+  font-size: 1.65rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  color: #E85425;
+}
+#reviews > .container > .dottes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reviews > .container > .dottes > .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #E85425;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#reviews > .container > .dottes > .dot:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: #d7dde6;
+  padding: 4rem 0;
 }
 
 /*# sourceMappingURL=main.css.map */
