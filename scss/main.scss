@@ -4,7 +4,7 @@ $font-family: 'Roboto', sans-serif;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-bold: 500;
-$font-size: 16px;
+$font-size: 18px;
 
 $color-background-primary: #F6F6F6;
 $color-background-secondary: #d7dde6;
@@ -32,6 +32,15 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+@keyframes hero-animation {
+    0% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(+2px);
+    }
 }
 
 .btn {
@@ -83,7 +92,7 @@ header {
                         text-decoration: none;
                         color: $color-text-primary;
                         font-weight: $font-weight-bold;
-                        font-size: 1.2rem;
+                        font-size: $font-size;
                         padding: $spacing-2;
                         transition: all 0.3s ease-in-out;
                         position: relative;
@@ -145,20 +154,17 @@ header {
             width: 100%;
             height: auto;
             margin-bottom: $spacing-5;
+            transition: transform 2s ease-in-out;
+            animation: hero-animation 3s ease-in-out infinite alternate;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
         & > .btn {
             padding: $spacing-2 $spacing-5 !important;
             margin: 0 auto;
             display: block;
             width: fit-content;
-        }
-        & > img {
-            width: 100%;
-            height: auto;
-            transition: transform 2s ease-in-out;
-            &:hover {
-                transform: scale(1.1);
-            }
         }
     }
 
@@ -391,6 +397,98 @@ footer {
                     & > ion-icon {
                         font-size: 2rem;
                         margin-right: $spacing-3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 768px;
+    }
+
+    header {
+        & > nav {
+            & > .container {
+                & > ul {
+                    & > li {
+                        & > a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        & > .hero {
+            & > h1 {
+                font-size: 2rem;
+            }
+            & > p {
+                font-size: 1rem;
+                margin-bottom: $spacing-3;
+            }
+            & > img {
+                margin-bottom: $spacing-4;
+            }
+        }
+        & > .about-us {
+            padding: 3rem 0;
+            & > .container {
+                & > .content {
+                    & > h2 {
+                        font-size: 1.8rem;
+                    }
+                    & > p {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #services {
+        padding: 3rem 0;
+        & > .container {
+            & > h2 {
+                font-size: 2rem;
+                margin-bottom: $spacing-4;
+            }
+            & > .services-grid {
+                grid-gap: $spacing-4;
+                & > .service {
+                    & > img {
+                        margin-bottom: $spacing-3;
+                    }
+                    & > h3 {
+                        font-size: 1.3rem;
+                        margin-bottom: $spacing-2;
+                    }
+                    & > p {
+                        font-size: 0.9rem;
+                        margin-bottom: $spacing-3;
+                    }
+                }
+            }
+        }
+    }
+
+    #reviews {
+        padding: 3rem 0;
+        & > .container {
+            & > h2 {
+                font-size: 2rem;
+                margin-bottom: $spacing-4;
+            }
+            & > .reviews-grid {
+                grid-gap: $spacing-4;
+                & > .review {
+                    & > p {
+                        font-size: 1.2rem;
+                    }
+                    & > h3 {
+                        font-size: 1.5rem;
                     }
                 }
             }

@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: #333333;
   background-color: #F6F6F6;
@@ -25,6 +25,14 @@ body {
   margin: 0 auto;
 }
 
+@keyframes hero-animation {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
 .btn {
   padding: 0.25rem 2rem !important;
   border: 1px solid #ECAD00;
@@ -79,7 +87,7 @@ header > nav > .container > ul > li > a {
   text-decoration: none;
   color: #333333;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 18px;
   padding: 0.5rem;
   transition: all 0.3s ease-in-out;
   position: relative;
@@ -137,20 +145,17 @@ header > .hero > img {
   width: 100%;
   height: auto;
   margin-bottom: 4rem;
+  transition: transform 2s ease-in-out;
+  animation: hero-animation 3s ease-in-out infinite alternate;
+}
+header > .hero > img:hover {
+  transform: scale(1.1);
 }
 header > .hero > .btn {
   padding: 0.5rem 4rem !important;
   margin: 0 auto;
   display: block;
   width: fit-content;
-}
-header > .hero > img {
-  width: 100%;
-  height: auto;
-  transition: transform 2s ease-in-out;
-}
-header > .hero > img:hover {
-  transform: scale(1.1);
 }
 header > .about-us {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../res/stock-trading-g1fed35b12_1920.jpg");
@@ -373,6 +378,71 @@ footer > .container > .contact > .social > a:hover {
 footer > .container > .contact > .social > a > ion-icon {
   font-size: 2rem;
   margin-right: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 768px;
+  }
+  header > nav > .container > ul > li > a {
+    font-size: 16px;
+  }
+  header > .hero > h1 {
+    font-size: 2rem;
+  }
+  header > .hero > p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  header > .hero > img {
+    margin-bottom: 2rem;
+  }
+  header > .about-us {
+    padding: 3rem 0;
+  }
+  header > .about-us > .container > .content > h2 {
+    font-size: 1.8rem;
+  }
+  header > .about-us > .container > .content > p {
+    font-size: 1.1rem;
+  }
+  #services {
+    padding: 3rem 0;
+  }
+  #services > .container > h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  #services > .container > .services-grid {
+    grid-gap: 2rem;
+  }
+  #services > .container > .services-grid > .service > img {
+    margin-bottom: 1rem;
+  }
+  #services > .container > .services-grid > .service > h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  #services > .container > .services-grid > .service > p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  #reviews {
+    padding: 3rem 0;
+  }
+  #reviews > .container > h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  #reviews > .container > .reviews-grid {
+    grid-gap: 2rem;
+  }
+  #reviews > .container > .reviews-grid > .review > p {
+    font-size: 1.2rem;
+  }
+  #reviews > .container > .reviews-grid > .review > h3 {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
