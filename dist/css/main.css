@@ -35,6 +35,7 @@ body {
 }
 #copyright {
   text-align: center;
+  font-size: 1rem;
   padding: 1rem;
   position: absolute;
   bottom: 0;
@@ -628,7 +629,7 @@ footer > .container > .contact > .social > a > ion-icon {
     font-size: 1.2rem;
   }
   footer {
-    padding: 1rem 0;
+    padding: 1rem 0 3rem 0;
   }
   footer > .container {
     grid-gap: 1rem;
@@ -655,7 +656,7 @@ footer > .container > .contact > .social > a > ion-icon {
   }
   footer > .container > .contact > ul > li {
     width: 300px;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
   footer > .container > .contact > .social {
     margin-top: 0.5rem;
@@ -667,6 +668,9 @@ footer > .container > .contact > .social > a > ion-icon {
   }
   footer > .container > .contact > .social > a > ion-icon {
     font-size: inherit;
+  }
+  #copyright {
+    font-size: 0.8rem;
   }
 }
 

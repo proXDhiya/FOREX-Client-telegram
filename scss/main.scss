@@ -45,6 +45,7 @@ body {
 
 #copyright {
     text-align: center;
+    font-size: 1rem;
     padding: $spacing-3;
     position: absolute;
     bottom: 0;
@@ -700,7 +701,7 @@ footer {
     }
 
     footer {
-        padding: $spacing-3 0;
+        padding: $spacing-3 0 calc($spacing-5 - 1rem) 0;
         & > .container {
             grid-gap: $spacing-3;
             grid-template-columns: 1fr;
@@ -725,7 +726,7 @@ footer {
                     margin-top: 0;
                     & > li {
                         width: 300px;
-                        font-size: 0.85rem;
+                        font-size: 0.75rem;
                     }
                 }
                 & > .social {
@@ -741,5 +742,9 @@ footer {
                 }
             }
         }
+    }
+
+    #copyright {
+        font-size: 0.8rem;
     }
 }
