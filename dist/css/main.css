@@ -432,15 +432,53 @@ footer > .container > .contact > .social > a > ion-icon {
   }
   #reviews > .container > h2 {
     font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  #reviews > .container > p {
     margin-bottom: 2rem;
   }
-  #reviews > .container > .reviews-grid {
-    grid-gap: 2rem;
-  }
-  #reviews > .container > .reviews-grid > .review > p {
+  #reviews > .container > .review > p {
     font-size: 1.2rem;
   }
-  #reviews > .container > .reviews-grid > .review > h3 {
+  #reviews > .container > .review > h3 {
+    font-size: 1.5rem;
+  }
+  footer {
+    padding: 2rem 0;
+  }
+  footer > .container {
+    grid-gap: 2rem;
+  }
+  footer > .container > .join > h2 {
+    font-size: 2rem;
+  }
+  footer > .container > .join > p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  footer > .container > .join > .btn {
+    padding: 0.25rem 2rem !important;
+    font-size: 1rem;
+  }
+  footer > .container > .contact {
+    align-content: center;
+  }
+  footer > .container > .contact > ul {
+    margin-top: 0;
+  }
+  footer > .container > .contact > ul > li {
+    width: 300px;
+  }
+  footer > .container > .contact > ul > li > a {
+    font-size: 1rem;
+  }
+  footer > .container > .contact > .social {
+    margin-top: 1rem;
+  }
+  footer > .container > .contact > .social > a {
+    font-size: 1rem;
+  }
+  footer > .container > .contact > .social > a > ion-icon {
     font-size: 1.5rem;
   }
 }

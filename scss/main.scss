@@ -479,16 +479,57 @@ footer {
         & > .container {
             & > h2 {
                 font-size: 2rem;
+                margin-bottom: $spacing-3;
+            }
+            & > p {
                 margin-bottom: $spacing-4;
             }
-            & > .reviews-grid {
-                grid-gap: $spacing-4;
-                & > .review {
-                    & > p {
-                        font-size: 1.2rem;
+            & > .review {
+                & > p {
+                    font-size: 1.2rem;
+                }
+                & > h3 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: $spacing-4 0;
+        & > .container {
+            grid-gap: $spacing-4;
+            & > .join {
+                & > h2 {
+                    font-size: 2rem;
+                }
+                & > p {
+                    font-size: 1rem;
+                    margin-bottom: $spacing-3;
+                }
+                & > .btn {
+                    padding: $spacing-1 $spacing-4 !important;
+                    font-size: 1rem;
+                }
+            }
+            & > .contact {
+                align-content: center;
+                & > ul {
+                    margin-top: 0;
+                    & > li {
+                        width: 300px;
+                        & > a {
+                            font-size: 1rem;
+                        }
                     }
-                    & > h3 {
-                        font-size: 1.5rem;
+                }
+                & > .social {
+                    margin-top: $spacing-3;
+                    & > a {
+                        font-size: 1rem;
+                        & > ion-icon {
+                            font-size: 1.5rem;
+                        }
                     }
                 }
             }
