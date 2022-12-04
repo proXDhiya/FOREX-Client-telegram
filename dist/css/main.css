@@ -18,11 +18,16 @@ body {
   color: #333333;
   background-color: #F6F6F6;
   min-height: 100vh;
+  line-height: 1.5;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+header[role=banner] {
+  display: none;
 }
 
 @keyframes hero-animation {
@@ -204,6 +209,7 @@ header > .hero > .btn {
   margin: 0 auto;
   display: block;
   width: fit-content;
+  border-radius: 25px;
 }
 header > .about-us {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../res/stock-trading-g1fed35b12_1920.jpg");
@@ -265,8 +271,8 @@ header > .about-us > .container > .content > p {
 }
 #services > .container > .services-grid > .service > img {
   width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
+  height: 200px;
+  margin-bottom: 1rem;
 }
 #services > .container > .services-grid > .service > h3 {
   font-size: 1.5rem;
@@ -468,6 +474,7 @@ footer > .container > .contact > .social > a > ion-icon {
   }
   #services > .container > .services-grid > .service > img {
     margin-bottom: 1rem;
+    height: 150px;
   }
   #services > .container > .services-grid > .service > h3 {
     font-size: 1.3rem;

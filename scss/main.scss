@@ -27,11 +27,16 @@ body {
     color: $color-text-primary;
     background-color: $color-background-primary;
     min-height: 100vh;
+    line-height: 1.5;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+header[role="banner"] {
+    display: none;
 }
 
 @keyframes hero-animation {
@@ -212,6 +217,7 @@ header {
             margin: 0 auto;
             display: block;
             width: fit-content;
+            border-radius: 25px;
         }
     }
 
@@ -279,8 +285,8 @@ header {
                 transition: all 0.3s ease-in-out;
                 & > img {
                     width: 100%;
-                    height: auto;
-                    margin-bottom: $spacing-4;
+                    height: 200px;
+                    margin-bottom: $spacing-3;
                 }
                 & > h3 {
                     font-size: 1.5rem;
@@ -509,6 +515,7 @@ footer {
                 & > .service {
                     & > img {
                         margin-bottom: $spacing-3;
+                        height: 150px;
                     }
                     & > h3 {
                         font-size: 1.3rem;
