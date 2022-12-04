@@ -33,6 +33,15 @@ body {
     transform: translateY(2px);
   }
 }
+#copyright {
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .btn {
   padding: 0.25rem 2rem !important;
   border: 1px solid #ECAD00;
@@ -346,6 +355,7 @@ footer {
   background-color: #495b75;
   padding: 4rem 0;
   color: #F6F6F6;
+  position: relative;
 }
 footer > .container {
   display: grid;
