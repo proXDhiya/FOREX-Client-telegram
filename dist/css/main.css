@@ -62,13 +62,18 @@ header > nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 101;
 }
 header > nav > .container {
   display: grid;
   grid-template-columns: 10% 1fr;
   height: 100%;
   align-items: center;
+}
+header > nav > .container > ion-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
 }
 header > nav > .container > img {
   width: 70px;
@@ -109,6 +114,39 @@ header > nav > .container > ul > li > a:hover:hover::after {
   position: absolute;
   content: "";
   width: 100%;
+}
+header > .mobile-nav {
+  display: hidden;
+  position: fixed;
+  width: 65%;
+  height: 100vh;
+  background-color: #F6F6F6;
+  top: 0;
+  right: -70%;
+  border-left: 1px solid white;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.6), 0 0 100px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+header > .mobile-nav > ul {
+  margin: 4rem 8rem 0 0;
+  list-style: none;
+  display: grid;
+  grid-gap: 1rem;
+  width: 85%;
+  text-align: end;
+}
+header > .mobile-nav > ul > li {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+header > .mobile-nav > ul > li > a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
 }
 header > .hero {
   height: auto;
@@ -209,7 +247,8 @@ header > .about-us > .container > .content > p {
   width: 100%;
   height: auto;
   background-color: #e7eaf0;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 15px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -221,7 +260,7 @@ header > .about-us > .container > .content > p {
 }
 #services > .container > .services-grid > .service > h3 {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 1rem;
   margin-left: 1rem;
 }
@@ -480,6 +519,144 @@ footer > .container > .contact > .social > a > ion-icon {
   }
   footer > .container > .contact > .social > a > ion-icon {
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  header > nav {
+    height: 45px;
+  }
+  header > nav > .container {
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+  }
+  header > nav > .container > ion-icon {
+    display: block;
+    justify-self: end;
+    margin-right: 1rem;
+  }
+  header > nav > .container > img {
+    width: 60px;
+  }
+  header > nav > .container > ul {
+    display: none;
+  }
+  header > .mobile-nav {
+    display: fblock;
+  }
+  header > .hero {
+    margin: 6rem auto 2.5rem auto;
+  }
+  header > .hero > h1 {
+    font-size: 1.5rem;
+  }
+  header > .hero > p {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  header > .hero > img {
+    margin-bottom: 2rem;
+  }
+  header > .hero > a {
+    padding: 0.25rem 1rem;
+    font-size: 0.85rem;
+  }
+  header > .about-us {
+    padding: 2rem 0;
+  }
+  header > .about-us > .container > .content > h2 {
+    font-size: 1.5rem;
+  }
+  header > .about-us > .container > .content > p {
+    font-size: 0.85rem;
+  }
+  #services {
+    padding: 2rem 0;
+  }
+  #services > .container > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  #services > .container > .services-grid {
+    grid-gap: 2.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  #services > .container > .services-grid > .service {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  #services > .container > .services-grid > .service > img {
+    margin-bottom: 0.5rem;
+  }
+  #services > .container > .services-grid > .service > h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  #services > .container > .services-grid > .service > p {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  #reviews {
+    padding: 2rem 0;
+  }
+  #reviews > .container > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  #reviews > .container > p {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+  }
+  #reviews > .container > .review > p {
+    font-size: 1rem;
+  }
+  #reviews > .container > .review > h3 {
+    font-size: 1.2rem;
+  }
+  footer {
+    padding: 1rem 0;
+  }
+  footer > .container {
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  footer > .container > .join > h2 {
+    font-size: 1.5rem;
+  }
+  footer > .container > .join > p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  footer > .container > .join > .btn {
+    padding: 0.25rem 1.75rem !important;
+    font-size: 0.8rem;
+  }
+  footer > .container > .contact {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  footer > .container > .contact > ul {
+    margin-top: 0;
+  }
+  footer > .container > .contact > ul > li {
+    width: 300px;
+    font-size: 0.85rem;
+  }
+  footer > .container > .contact > .social {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+  }
+  footer > .container > .contact > .social > a {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  footer > .container > .contact > .social > a > ion-icon {
+    font-size: inherit;
   }
 }
 
