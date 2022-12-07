@@ -22,6 +22,14 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+.stars {
+  margin: 10px auto 30px auto;
+}
+
+.stars > ion-icon {
+  color: #ff9500;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -360,7 +368,7 @@ header > .about-us > .container > .content > p {
 }
 #reviews > .container > .review {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-rows: 2fr 0.7fr;
 }
 #reviews > .container > .review > p {
   width: 60%;

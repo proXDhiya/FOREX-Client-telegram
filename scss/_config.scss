@@ -24,3 +24,11 @@ html {
                         // disable selection
   -webkit-tap-highlight-color: transparent;
 }
+
+.stars {
+  margin: 10px auto 30px auto;
+}
+
+.stars > ion-icon{
+  color: #ff9500;
+}

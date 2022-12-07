@@ -367,7 +367,7 @@ header {
         }
         & > .review {
             display: grid;
-            grid-template-rows: 2fr 1fr 1fr;
+            grid-template-rows: 2fr .7fr;
             & > p {
                 width: 60%;
                 margin: 0 auto $spacing-2 auto;
